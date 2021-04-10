@@ -10,7 +10,10 @@ git-bikeshare
 This project tests my git knowledge by posting my bikeshare code into a remote repository
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Initial fork from https://github.com/udacity/pdsnd_github
