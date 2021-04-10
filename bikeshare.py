@@ -275,6 +275,7 @@ def raw_data(df):
     e = -1
     opt_in = input('\nWould you like to see five rows of raw data? Enter yes or no.\n')
     while opt_in.lower() == 'yes':
+        pd.set_option('display.max_columns',200)
         a += 5
         b += 5
         c += 5
