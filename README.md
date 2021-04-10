@@ -4,10 +4,10 @@
 2021-04-10
 
 ### Project Title
-Replace the Project Title
+git-bikeshare
 
 ### Description
-Describe what your project is about and what it does
+This project tests my git knowledge by posting my bikeshare code into a remote repository
 
 ### Files used
 Include the files used
