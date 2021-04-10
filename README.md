@@ -8,6 +8,7 @@ git-bikeshare
 
 ### Description
 This project tests my git knowledge by posting my bikeshare code into a remote repository
+The commit message style guide wasn't fully realized until the fourth commit, so commit messages thereafter hopefully hit the mark
 
 ### Files used
 bikeshare.py
