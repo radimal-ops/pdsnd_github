@@ -17,100 +17,100 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    x = 'invalid'
-    y = 'valid'
-    z = 'valid'
-    while x == 'invalid':
+    a = 'invalid'
+    b = 'valid'
+    c = 'valid'
+    while a == 'invalid':
         city = input("\nWhich city would you like to explore today? ").lower()
         message = "\n    Ok, let\'s go to {}!"
         if city.lower() == 'chicago':
-            x ='valid'
+            a ='valid'
             print(message.format(city.title()))
-            y = 'invalid'
+            b = 'invalid'
         elif city.lower() == 'new york city':
-            x ='valid'
+            a ='valid'
             print(message.format(city.title()))
-            y = 'invalid'
+            b = 'invalid'
         elif city.lower() == 'washington':
-            x ='valid'
+            a ='valid'
             print(message.format(city.title()))
-            y = 'invalid'
+            b = 'invalid'
         else:
             print('\n    *** Oops, we don\'t have data for {} ***'.format(city.title()))
             print('\n    Please try again. We can accept: Chicago, New York City, or Washington. ')
 
 
     # get user input for month (all, january, february, ... , june)
-    while y =='invalid':
+    while b =='invalid':
         month = input("\nWhich month are you interested in? ").lower()
         message = "\n    Ok, let\'s look at {} in {}!"
         if month.lower() == 'january':
-            y ='valid'
+            b ='valid'
             print(message.format(city.title(),month.title()))
-            z = 'invalid'
+            c = 'invalid'
         elif month.lower() == 'february':
-            y = 'valid'
+            b = 'valid'
             print(message.format(city.title(),month.title()))
-            z = 'invalid'
+            c = 'invalid'
         elif month.lower() == 'march':
-            y = 'valid'
+            b = 'valid'
             print(message.format(city.title(),month.title()))
-            z = 'invalid'
+            c = 'invalid'
         elif month.lower() == 'april':
-            y = 'valid'
+            b = 'valid'
             print(message.format(city.title(),month.title()))
-            z = 'invalid'
+            c = 'invalid'
         elif month.lower() == 'may':
-            y = 'valid'
+            b = 'valid'
             print(message.format(city.title(),month.title()))
-            z = 'invalid'
+            c = 'invalid'
         elif month.lower() == 'june':
-            y = 'valid'
+            b = 'valid'
             print(message.format(city.title(),month.title()))
-            z = 'invalid'
+            c = 'invalid'
         elif month.lower() == 'all':
-            y = 'valid'
+            b = 'valid'
             print("\n    Ok, let\'s look at {} months from January until June!".format(month.upper()))
-            z = 'invalid'
+            c = 'invalid'
         else:
             print('\n    *** Oops, we don\'t have data for {} ***'.format(month.title()))
             print('\n    Please try again. We can accept any month from January until June or ALL. ')
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    while z == 'invalid':
+    while c == 'invalid':
         day = input("\nWhich day of the week would you like to look at? ").lower()
         message = "\n    Excellent. You\'re final fiter selections are:\n    City: {}\n    Month(s): {}\n    Day(s): {}\n    Let\'s go!!!"
         if day.lower() == 'monday':
-            z = 'valid'
+            c = 'valid'
             print(message.format(city.title(),month.title(),day.title()))
             day = 0
         elif day.lower() == 'tuesday':
-            z = 'valid'
+            c = 'valid'
             print(message.format(city.title(),month.title(),day.title()))
             day = 1
         elif day.lower() == 'wednesday':
-            z = 'valid'
+            c = 'valid'
             print(message.format(city.title(),month.title(),day.title()))
             day = 2
         elif day.lower() == 'thursday':
-            z = 'valid'
+            c = 'valid'
             print(message.format(city.title(),month.title(),day.title()))
             day = 3
         elif day.lower() == 'friday':
-            z = 'valid'
+            c = 'valid'
             print(message.format(city.title(),month.title(),day.title()))
             day = 4
         elif day.lower() == 'saturday':
-            z = 'valid'
+            c = 'valid'
             print(message.format(city.title(),month.title(),day.title()))
             day = 5
         elif day.lower() == 'sunday':
-            z = 'valid'
+            c = 'valid'
             print(message.format(city.title(),month.title(),day.title()))
             day = 6
         elif day.lower() == 'all':
-            z = 'valid'
+            c = 'valid'
             print(message.format(city.title(),month.title(),day.title()))
         else:
             print('\n    *** Oops, we don\'t have data for {} ***'.format(day.title()))
@@ -275,6 +275,7 @@ def raw_data(df):
     e = -1
     opt_in = input('\nWould you like to see five rows of raw data? Enter yes or no.\n')
     while opt_in.lower() == 'yes':
+        pd.set_option('display.max_columns',200)
         a += 5
         b += 5
         c += 5
